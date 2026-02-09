@@ -74,6 +74,9 @@ export class Router {
   async render(route, params = {}) {
     this.container.innerHTML = '';
     
+    // Scroll to top on navigation
+    window.scrollTo(0, 0);
+    
     try {
       const view = await route.view(params);
       

@@ -6,9 +6,14 @@ export function MainLayout(content) {
   
   layout.innerHTML = `
     <ui-navbar>
-      <a href="/" data-link>Home</a>
-      <a href="/about" data-link>About</a>
-      <a href="/blog" data-link>Blog</a>
+      <div style="display: flex; gap: var(--space-lg);">
+        <a href="/" data-link>Home</a>
+        <a href="/about" data-link>About</a>
+        <a href="/blog" data-link>Blog</a>
+      </div>
+      <a href="/login" data-link>
+        <ui-button>Login</ui-button>
+      </a>
     </ui-navbar>
     <main style="padding: var(--space-xl); flex: 1; max-width: 1200px; margin: 0 auto; width: 100%;">
       <div id="page-content"></div>

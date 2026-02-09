@@ -24,6 +24,10 @@ const routes = [
     view: (params) => import('./pages/blog-detail.js').then(m => m.BlogDetailPage(params)) 
   },
   { 
+    path: '/login', 
+    view: () => import('./pages/login.js').then(m => m.LoginPage()) 
+  },
+  { 
     path: '*', 
     view: () => import('./pages/not-found.js').then(m => m.NotFoundPage()) 
   }
